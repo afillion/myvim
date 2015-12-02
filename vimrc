@@ -30,6 +30,13 @@ Plugin 'VundleVim/Vundle.vim'
 " Linter
 Plugin 'scrooloose/syntastic'
 
+" snippet
+Plugin 'Geam/snipMate'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'luochen1990/rainbow'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -44,7 +51,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
 
 syntax on						" syntaxic coloration
 set encoding=utf-8      		" utf8 or gtfo
@@ -140,4 +146,12 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_warning_symbol='>'
 let g:syntastic_c_include_dirs=[ '.', './includes', '../includes', './libft/includes' , '../libft/includes' ]
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+" }}}
+
+" NERDTree {{{
+nnoremap <C-n> :NERDTreeToggle<CR>
+" }}}
+
+" Rainbow {{{
+let g:rainbow_active = 1
 " }}}
